@@ -1,23 +1,46 @@
 import logo from '../logo.svg';
+import React, { useState } from 'react';
+import CartWidget from './cartWidget';
 
 function Navbar(props) {
-        return(
-            <div>
-                <div 
-                className='bg-red-200'>
-                    <img src={logo} width={80} height={80} alt="My Image" />
-                    <ul 
-                    className='bg-blue-300'>
-                        <li ><a className='text-white' href="/">Home</a></li>
-                        <li><a href="/">Shop</a></li>
-                        <li><a href="/">About</a></li>
-                        <li><a href="/">Contact</a></li>
-                    </ul>
-                </div>
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-            </div>
-        );
-
+  return (
+    <div>
+      <div className='container m-auto p-4 flex flex-col sm:flex-row justify-between'>
+        <div className='flex flex-row gap-2 justify-between items-center'>
+          <div className='flex flex-row gap-2  items-center'>
+            <img src={logo} width={50} height={50} alt="My Image" />
+            <h1 className='text-2xl font-semibold'>Cannastore</h1>
+          </div>
+          <div onClick={() => setIsMenuOpen(!isMenuOpen)} className={`space-y-2 sm:hidden cursor-pointer`} >
+            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+          </div>
+        </div>
+        <div className={`hidden sm:flex flex-row items-center gap-2 `}>
+            <ul className='flex flex-row justify-between gap-4'>
+              <li><a href="/">Shop</a></li>
+              <li><a href="/">About</a></li>
+              <li><a href="/">Contact</a></li>
+            </ul>
+            <CartWidget />
+          </div>
+          {isMenuOpen && (
+            <div className={`flex flex-row items-center gap-2 sm:hidden`}>
+                <ul className='flex flex-row justify-between gap-4 '>
+                <li><a href="/">Shop</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Contact</a></li>
+                </ul>
+                <CartWidget />
+          </div>
+          )}
+          
+      </div>
+    </div>
+  );
 }
 
 export default Navbar;
