@@ -7,6 +7,7 @@ const CartWidget = (props) => {
     return(
         <div className="relative mb-4">
             {isCartUsed > 0 &&(
+                <div className="t-0 absolute left-3">
                     <p className="flex h-2 w-2 items-center justify-center rounded-full bg-red-500 p-3 text-xs text-white">{isCartUsed}</p>
                 </div>
             )}
