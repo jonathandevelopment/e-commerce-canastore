@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const CartWidget = (props) => {
 
-    const [isCartUsed, setIsCartUsed] = useState(1);
+    const isCartUsed = 2;
 
     return(
         <div className="relative mb-4">

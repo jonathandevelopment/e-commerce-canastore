@@ -10,7 +10,7 @@ function Navbar(props) {
       <div className='container m-auto p-4 flex flex-col sm:flex-row justify-between'>
         <div className='flex flex-row gap-2 justify-between items-center'>
           <div className='flex flex-row gap-2  items-center'>
-            <img src={logo} width={50} height={50} alt="My Image" />
+            <img src={logo} width={50} height={50} alt="logo" />
             <h1 className='text-2xl font-semibold'>Cannastore</h1>
           </div>
           <div onClick={() => setIsMenuOpen(!isMenuOpen)} className={`space-y-2 sm:hidden cursor-pointer`} >

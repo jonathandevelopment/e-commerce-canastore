@@ -12,7 +12,7 @@ const ItemListContainer = (props) => {
                 <div className="bg-gray-300 h-[100px]"> product card</div>
             </div>
             <div className="py-6 hover:underline">
-                 <a href="#" >View All</a>
+                 <a href="/" >View All</a>
             </div>
             
 
