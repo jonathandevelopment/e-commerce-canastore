@@ -1,4 +1,4 @@
-import headerImage from '../assets/headerbg.jpg';
+import headerImage from '../../assets/headerbg.jpg';
 
 const Header = (props) => {
     return(
