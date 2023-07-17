@@ -17,8 +17,12 @@ const ItemDetailContainer = () => {
   }
 
   useEffect(() => {
-    requestProduct();
-    requestProducts();
+    const fetchData = async () => {
+      await requestProduct();
+      await requestProducts();
+    };
+
+    fetchData();
   }, [requestProduct, requestProducts]);
 
   const productIndex = parseInt(id) - 1;
