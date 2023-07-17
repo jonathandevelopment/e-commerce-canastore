@@ -14,7 +14,7 @@ const ItemDetailContainer = () => {
 
     useEffect(() => {
       requestProduct();
-    },[requestProduct])
+    },)
 
   return (
     <div className="flex items-center justify-center">
