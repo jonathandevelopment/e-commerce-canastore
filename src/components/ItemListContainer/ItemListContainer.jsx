@@ -6,7 +6,7 @@ const ItemListContainer = (props) => {
     const [cannabisProducts, setCannabisProducts] = useState([]);
 
     async function requestProducts() {
-        let respuesta = await getData();
+        const respuesta = await getData();
         setCannabisProducts(respuesta)
     }
 
@@ -15,7 +15,7 @@ const ItemListContainer = (props) => {
     },[])
 
     
-    console.log(cannabisProducts)
+    
 
     return(
         <div className="container m-auto px-4 py-10">

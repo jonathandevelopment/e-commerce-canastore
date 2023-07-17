@@ -107,4 +107,13 @@ function getData() {
   });
 }
 
+export function getProductData(idURL) {
+  return new Promise((resolve, reject) => {
+    const productRequested = cannabisProducts.find(
+      (item) => item.id === Number(idURL)
+    );
+      resolve(productRequested); 
+  });
+}
+
 export default getData;
