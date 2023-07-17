@@ -3,13 +3,12 @@ import getData, { getProductData } from "../../server/async";
 import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
-  const [cannabisProduct, setCannabisProduct] = useState({});
   const [cannabisProducts, setCannabisProducts] = useState([]);
   const { id } = useParams();
 
   async function requestProduct() {
     const respuesta = await getProductData(id);
-    setCannabisProduct(respuesta);
+    // You can choose to use the respuesta value directly without setting it in state
   }
 
   async function requestProducts() {
@@ -20,7 +19,7 @@ const ItemDetailContainer = () => {
   useEffect(() => {
     requestProduct();
     requestProducts();
-  }, []);
+  }, [requestProduct, requestProducts]);
 
   const productIndex = parseInt(id) - 1;
   const productExists = productIndex >= 0 && productIndex < cannabisProducts.length;
