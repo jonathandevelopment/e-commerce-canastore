@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import getData from "../../server/async";
 import Item from "../Item/Item";
+import { Link } from "react-router-dom";
 
 const ItemListContainer = (props) => {
     const [cannabisProducts, setCannabisProducts] = useState([]);
@@ -27,7 +28,7 @@ const ItemListContainer = (props) => {
             ))}
             </div>
             <div className="py-6 hover:underline">
-                 <a href="/" >View All</a>
+                 <Link to="/product" >View All</Link>
             </div>
             
 

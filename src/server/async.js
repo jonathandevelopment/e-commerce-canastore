@@ -112,6 +112,7 @@ export function getProductData(idURL) {
     const productRequested = cannabisProducts.find(
       (item) => item.id === Number(idURL)
     );
+
       resolve(productRequested); 
   });
 }
