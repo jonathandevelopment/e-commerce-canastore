@@ -15,10 +15,9 @@ const ItemListContainer = (props) => {
 
     useEffect(() => {
         requestProducts();
+        //eslint-disable-next-line
     },[categoryId])
 
-    
-    
 
     return(
         <div className="container m-auto px-4 py-10">
