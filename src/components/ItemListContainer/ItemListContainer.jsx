@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
-import getData from "../../server/async";
+import getData, {getCategoryData} from "../../server/async";
 import Item from "../Item/Item";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const ItemListContainer = (props) => {
     const [cannabisProducts, setCannabisProducts] = useState([]);
+    const { categoryId } = useParams();
 
     async function requestProducts() {
-        const respuesta = await getData();
+
+        let respuesta = categoryId ? await getCategoryData(categoryId) : await getData();
         setCannabisProducts(respuesta)
     }
 

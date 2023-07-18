@@ -25,6 +25,9 @@ function Navbar(props) {
               <li><Link to="/product">Shop</Link></li>
               <li><Link to="/about">About</Link></li>
               <li><Link to="/contact">Contact</Link></li>
+              <li><Link to="category/indica">Indica</Link></li>
+              <li><Link to="category/sativa">Sativa</Link></li>
+              <li><Link to="category/hybrid">Hybrid</Link></li>
             </ul>
             <CartWidget />
           </div>
@@ -34,6 +37,9 @@ function Navbar(props) {
                 <li><Link to="/product">Shop</Link></li>
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
+                <li><Link to="/indica">Indica</Link></li>
+                <li><Link to="/sativa">Sativa</Link></li>
+                <li><Link to="/hybrid">Hybrid</Link></li>
                 </ul>
                 <CartWidget />
           </div>

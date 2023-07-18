@@ -32,10 +32,8 @@ function App() {
                   title="Our Premium  Products"
                   subtitle="A Wide Range of High-Quality Strains"
                 />} />
-          <Route path='/product/:id' element={<ItemDetailContainer
-                  title="Our Premium  Products"
-                  subtitle="A Wide Range of High-Quality Strains"
-                />} />
+          <Route path='/product/:id' element={<ItemDetailContainer/>} />
+          <Route path='/category/:categoryId' element={<ItemListContainer />} />
           <Route path='*' element={<h1 className="text-3xl font-semibold text-center">Page Not Found</h1>} />
         </Routes>
       </BrowserRouter>
