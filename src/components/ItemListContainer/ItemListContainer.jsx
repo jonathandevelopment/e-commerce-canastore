@@ -15,7 +15,7 @@ const ItemListContainer = (props) => {
 
     useEffect(() => {
         requestProducts();
-    },[])
+    },[categoryId])
 
     
     
