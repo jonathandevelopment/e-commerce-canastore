@@ -5,6 +5,7 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import Footer from "./components/Footer/Footer";
+import About from "./components/About/About";
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
             }
           />
           <Route
-            path="/product/"
+            path="/product"
             element={
               <>
               <Header
@@ -39,6 +40,19 @@ function App() {
                 title="Browse All Our Products"
                 subtitle="A Wide Range of High-Quality Products"
               />
+              </>
+              
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <>
+              <Header
+                  title=" About Us"
+                  subtitle="Discover the World of Cannabis with Expert Reviews, Guides, and More!"
+                />
+                <About/>
               </>
               
             }
