@@ -11,7 +11,7 @@ const cannabisProducts = [
   },
   {
     name: "OG Kush",
-    type: "indica",
+    type: "Indica",
     thcContent: 18,
     cbdContent: 0.5,
     aroma: "Earthy and citrusy",
