@@ -103,7 +103,10 @@ const cannabisProducts = [
 
 function getData() {
   return new Promise((resolve, reject) => {
-      resolve(cannabisProducts)
+      setTimeout(() => {
+        resolve(cannabisProducts);
+      }, 1000)
+      
   });
 }
 
