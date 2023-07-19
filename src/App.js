@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
+import ContactForm from "./components/ContactForm/ContactForm";
 
 function App() {
   return (
@@ -53,6 +54,19 @@ function App() {
                   subtitle="Discover the World of Cannabis with Expert Reviews, Guides, and More!"
                 />
                 <About/>
+              </>
+              
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <>
+              <Header
+                  title=" Contact Us"
+                  subtitle="Discover the World of Cannabis with Expert Reviews, Guides, and More!"
+                />
+                <ContactForm/>
               </>
               
             }
