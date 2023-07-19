@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const Item = (props) => {
     
@@ -14,7 +15,8 @@ const Item = (props) => {
             <p className="text-gray-600 mb-2">Cbd : {cbdContent}%</p>
             <p className="text-green-600 mb-2">{type}</p>
             <p className="text-gray-800 mb-2 text-2xl">$ {price}</p>
-            <a className="text-green-900 font-semibold hover:underline" href={`/products/${id}`}> See detail</a>
+            <Link className="text-green-900 font-semibold hover:underline" 
+            to={`/product/${id}`}> See detail</Link>
         </div>
     )
 }

@@ -1,7 +1,7 @@
 const cannabisProducts = [
   {
     name: "Blue Dream",
-    type: "Hybrid",
+    type: "hybrid",
     thcContent: 22,
     cbdContent: 2,
     aroma: "Sweet and berry-like",
@@ -21,7 +21,7 @@ const cannabisProducts = [
   },
   {
     name: "Girl Scout Cookies",
-    type: "Hybrid",
+    type: "hybrid",
     thcContent: 20,
     cbdContent: 1,
     aroma: "Sweet and minty",
@@ -31,7 +31,7 @@ const cannabisProducts = [
   },
   {
     name: "Sour Diesel",
-    type: "Sativa",
+    type: "sativa",
     thcContent: 19,
     cbdContent: 0.3,
     aroma: "Diesel and citrus",
@@ -41,7 +41,7 @@ const cannabisProducts = [
   },
   {
     name: "White Widow",
-    type: "Hybrid",
+    type: "hybrid",
     thcContent: 23,
     cbdContent: 0.8,
     aroma: "Earthy and piney",
@@ -51,7 +51,7 @@ const cannabisProducts = [
   },
   {
     name: "Northern Lights",
-    type: "Indica",
+    type: "indica",
     thcContent: 17,
     cbdContent: 0.2,
     aroma: "Sweet and spicy",
@@ -61,7 +61,7 @@ const cannabisProducts = [
   },
   {
     name: "Jack Herer",
-    type: "Sativa",
+    type: "sativa",
     thcContent: 21,
     cbdContent: 0.5,
     aroma: "Earthy and piney",
@@ -71,7 +71,7 @@ const cannabisProducts = [
   },
   {
     name: "Purple Kush",
-    type: "Indica",
+    type: "indica",
     thcContent: 18,
     cbdContent: 1.5,
     aroma: "Grape and earthy",
@@ -81,7 +81,7 @@ const cannabisProducts = [
   },
   {
     name: "AK-47",
-    type: "Hybrid",
+    type: "hybrid",
     thcContent: 22,
     cbdContent: 0.7,
     aroma: "Skunky and spicy",
@@ -91,7 +91,7 @@ const cannabisProducts = [
   },
   {
     name: "Durban Poison",
-    type: "Sativa",
+    type: "sativa",
     thcContent: 24,
     cbdContent: 0.1,
     aroma: "Sweet and earthy",
@@ -103,8 +103,31 @@ const cannabisProducts = [
 
 function getData() {
   return new Promise((resolve, reject) => {
-      resolve(cannabisProducts)
+      setTimeout(() => {
+        resolve(cannabisProducts);
+      }, 1000)
+      
   });
 }
+
+export function getProductData(idURL) {
+  return new Promise((resolve, reject) => {
+    const productRequested = cannabisProducts.find(
+      (item) => item.id === Number(idURL)
+    );
+
+      resolve(productRequested); 
+  });
+}
+
+export function getCategoryData(categoryURL) {
+  return new Promise( (resolve, reject) => {
+    const categoryRequested = cannabisProducts.filter( item => {
+      return  item.type.toLowerCase() === categoryURL.toLowerCase();
+      
+    });
+    resolve(categoryRequested);
+  }
+)}
 
 export default getData;
